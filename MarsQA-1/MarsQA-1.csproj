@@ -34,4 +34,50 @@
   <ItemGroup>
     <Folder Include="Specflow\" />
   </ItemGroup>
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Specflow\Login.feature">
+      <Visible>False</Visible>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Specflow\Profile.feature">
+      <Visible>False</Visible>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Profile.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Specflow\Description.feature">
+      <Visible>False</Visible>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Description.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Specflow\Language.feature">
+      <Visible>False</Visible>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Language.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Specflow\Skills.feature">
+      <Visible>False</Visible>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Skills.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Specflow\Education.feature">
+      <Visible>False</Visible>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Education.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Specflow\Certification.feature">
+      <Visible>False</Visible>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Certification.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Specflow\Skills.feature.cs">
+      <DependentUpon>Skills.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Specflow\Certification.feature.cs">
+      <DependentUpon>Certification.feature</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Specflow\Description.feature.cs">
+      <DependentUpon>Description.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

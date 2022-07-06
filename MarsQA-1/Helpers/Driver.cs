@@ -42,7 +42,7 @@ namespace MarsQA.Helpers
         }
 
         //Close the browser
-        public void Close()
+        public static void Close()
         {
             driver.Quit();
         }

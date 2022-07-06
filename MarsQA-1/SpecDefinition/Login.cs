@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
 
-namespace MarsQA.Specflow
+namespace MarsQA.SpecDefinition
 {
     [Binding]
     class Login
@@ -19,6 +19,7 @@ namespace MarsQA.Specflow
         {
             Driver.Initialize();
             SignIn.SigninStep();
+            Driver.Close();
         }
 
     }
