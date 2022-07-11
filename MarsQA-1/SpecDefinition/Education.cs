@@ -1,6 +1,7 @@
 ﻿using System;
 
 using TechTalk.SpecFlow;
+using NUnit.Framework;
 
 namespace MarsQA_1.SpecDefinition
 {
@@ -8,14 +9,12 @@ namespace MarsQA_1.SpecDefinition
     public class Education
     {
 
-
         [When(@"User navigate to education tab")]
         public void educationFunctionOne()
         {
             // TODO: implement arrange (recondition) logic
 
         }
-
 
         [When(@"User add education details")]
         public void educationFunctiontwo()
@@ -28,11 +27,9 @@ namespace MarsQA_1.SpecDefinition
         public void educationFunctionthree()
         {
             // TODO: implement arrange (recondition) logic
+            Assert.Fail("Need to implement");
 
         }
-
-
-
 
         [When(@"User update existing education  details")]
         public void educationFunctionfour()
@@ -45,6 +42,7 @@ namespace MarsQA_1.SpecDefinition
         public void educationFunctionfive()
         {
             // TODO: implement arrange (recondition) logic
+            Assert.Fail("Need to implement");
 
         }
 
@@ -59,11 +57,10 @@ namespace MarsQA_1.SpecDefinition
         public void educationFunctionseven()
         {
             // TODO: implement arrange (recondition) logic
+            Assert.Fail("Neeed to implement");
+            
 
         }
-
-
-
 
     }
 }

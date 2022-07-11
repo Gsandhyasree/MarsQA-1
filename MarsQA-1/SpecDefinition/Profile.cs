@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
+using NUnit.Framework;
 
 namespace MarsQA_1.SpecDefinition
 {
@@ -31,9 +32,9 @@ namespace MarsQA_1.SpecDefinition
         public void ProfileFunctionThree()
         {
             // TODO: implement arrange (recondition) logic
+            Assert.Fail("Need to implement");
 
         }
-
 
     }
 }

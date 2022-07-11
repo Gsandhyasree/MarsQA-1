@@ -15,7 +15,7 @@ namespace MarsQA.Pages
         {
             Driver.NavigateUrl();
             SignInBtn.Click();
-            Email.SendKeys("gsandyasree@gmail.com");
+            Email.SendKeys("gsandyasree+1@gmail.com");
             Password.SendKeys("12345678");
             LoginBtn.Click();
         }

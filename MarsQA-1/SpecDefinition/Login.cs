@@ -2,10 +2,6 @@
 using MarsQA.Helpers;
 using MarsQA.Pages;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
 
@@ -19,8 +15,7 @@ namespace MarsQA.SpecDefinition
         {
             Driver.Initialize();
             SignIn.SigninStep();
-            Driver.Close();
-        }
+                    }
 
     }
 }

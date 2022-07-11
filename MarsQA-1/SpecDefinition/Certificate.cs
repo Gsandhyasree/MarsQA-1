@@ -1,6 +1,8 @@
 ﻿using System;
 
 using TechTalk.SpecFlow;
+using NUnit.Framework;
+using MarsQA_1.Pages;
 
 namespace MarsQA_1.SpecDefinition
 {
@@ -10,59 +12,56 @@ namespace MarsQA_1.SpecDefinition
         [When(@"User navigate to certification tab")]
         public void certificationFunctionOne()
         {
-            // TODO: implement arrange (recondition) logic
-
+            CertifactionSection certSection = new CertifactionSection();
+            certSection.GotoCertTab();
         }
-
 
         [When(@"User add certification details")]
         public void certificationFunctiontwo()
         {
-            // TODO: implement arrange (recondition) logic
-
+            CertifactionSection certSection = new CertifactionSection();
+            certSection.CertAddNew();
         }
 
         [Then(@"The certifcation details added sucessfully")]
-
         public void certificationFunctionthree()
         {
-            // TODO: implement arrange (recondition) logic
+            CertifactionSection certSection = new CertifactionSection();
+            string msgValue = certSection.getcertAward();
+            Assert.That(msgValue == "ISTQB", "Test Case Failed");
 
         }
-
-
-
 
         [When(@"User update the existing certificate details")]
         public void certificationFunctionfour()
         {
-            // TODO: implement arrange (recondition) logic
-
+            CertifactionSection certSection = new CertifactionSection();
+            certSection.CretUpdate();
         }
 
         [Then(@"The existing certificate details updated sucessfully")]
         public void certificationFunctionfive()
         {
-            // TODO: implement arrange (recondition) logic
-
+            CertifactionSection certSection = new CertifactionSection();
+            string msgValue = certSection.GetCertFromText();
+            Assert.That(msgValue == "MVPIndustryConnect", "Test Case Failed");
         }
 
         [When(@"User delete the existing certification details")]
         public void certificationFunctionsix()
         {
-            // TODO: implement arrange (recondition) logic
+        
+            CertifactionSection certSection = new CertifactionSection();
+            certSection.CertDelete();
 
         }
 
         [Then(@"The existing certification details deleted sucessfully")]
         public void certificationFunctionseven()
         {
-            // TODO: implement arrange (recondition) logic
+            Assert.True(true);
 
         }
-
-
-
 
     }
 }

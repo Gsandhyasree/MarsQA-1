@@ -1,9 +1,9 @@
-﻿Feature: Education
+﻿Feature: 600) Education
 	As user i want to Manage my Education details
 	
 	
 @EducationAdd
-Scenario: Education Add
+Scenario: 601) Education Add
 	Given User login to the portal sucessfully
 	When User navigate to education tab
 	When User add education details
@@ -12,7 +12,7 @@ Scenario: Education Add
 
 
 @EducationEdit
-Scenario: Education Edit
+Scenario: 602) Education Edit
 	Given User login to the portal sucessfully
 	When User navigate to education tab
 	When User update existing education  details
@@ -21,7 +21,7 @@ Scenario: Education Edit
 
 
 @EducationDelete
-Scenario: Education Delete
+Scenario: 603) Education Delete
 	Given User login to the portal sucessfully
 	When User navigate to education tab
 	When User deleted existing education details

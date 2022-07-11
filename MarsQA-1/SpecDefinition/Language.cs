@@ -1,6 +1,8 @@
 ﻿using System;
 
 using TechTalk.SpecFlow;
+using NUnit.Framework;
+using MarsQA_1.Pages;
 
 namespace MarsQA_1.SpecDefinition
 {
@@ -10,7 +12,8 @@ namespace MarsQA_1.SpecDefinition
         [When(@"User navigate to language tab")]
         public void LanguageFunctionOne()
         {
-            // TODO: implement arrange (recondition) logic
+            LanguageSection languageSection = new LanguageSection();
+            languageSection.GoToLangTab();
 
         }
 
@@ -18,46 +21,47 @@ namespace MarsQA_1.SpecDefinition
         [When(@"User add new language")]
         public void LanguageFunctiontwo()
         {
-            // TODO: implement arrange (recondition) logic
-
+            LanguageSection languageSection = new LanguageSection();
+            languageSection.addNewLang();
         }
 
         [Then(@"The new language to be added sucessfully")]
         public void LanguageFunctionthree()
         {
-            // TODO: implement arrange (recondition) logic
+            LanguageSection languageSection = new LanguageSection();
+            string msgValue = languageSection.getNewLangDetails();
+            Assert.That(msgValue  == "English", "Test Case Failed");
 
         }
-
-
-
 
         [When(@"User update existing language")]
         public void LanguageFunctionfour()
         {
-            // TODO: implement arrange (recondition) logic
-
+            LanguageSection languageSection = new LanguageSection();
+            languageSection.editLang();
         }
 
         [Then(@"The language details updated sucssfully")]
         public void LanguageFunctionfive()
         {
-            // TODO: implement arrange (recondition) logic
-
+            LanguageSection languageSection = new LanguageSection();
+            string msgValue = languageSection.getLangLevel();
+            Console.WriteLine(msgValue);
+            Assert.That(msgValue == "Conversational", "Test Case Failed");
         }
 
         [When(@"User delete existing language")]
         public void LanguageFunctionsix()
         {
-            // TODO: implement arrange (recondition) logic
+            LanguageSection languageSection = new LanguageSection();
+            languageSection.deleteLang();
 
         }
 
         [Then(@"The user deleted existing language sucessfully")]
         public void LanguageFunctionseven()
         {
-            // TODO: implement arrange (recondition) logic
-
+            Assert.True(true);
         }
 
     }

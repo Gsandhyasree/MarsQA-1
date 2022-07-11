@@ -5,9 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechTalk.SpecFlow;
+using NUnit.Framework;
 
 namespace MarsQA.Helpers
 {
+    [Binding]
     public class Driver
     {
         //Initialize the browser
@@ -44,8 +47,16 @@ namespace MarsQA.Helpers
         //Close the browser
         public static void Close()
         {
+           
             driver.Quit();
         }
-       
+
+
+        [AfterScenario]
+        public static void CloseTestRun()
+        {
+            Close();
+        } 
+
     }
 }
