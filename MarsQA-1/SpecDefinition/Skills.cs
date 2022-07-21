@@ -1,5 +1,4 @@
 ﻿using System;
-
 using TechTalk.SpecFlow;
 using NUnit.Framework;
 using System.Threading; 
@@ -64,7 +63,9 @@ namespace MarsQA_1.SpecDefinition
         [Then(@"The existing skill details deleted sucessfully")]
         public void skillFunctionseven()
         {
-            Assert.True(true);
+            SkillSection skillSection = new SkillSection();
+            string msgValue = skillSection.getNewSkilletail();
+            Assert.That(msgValue != "Test Analyst", "Test Case Failed");
         }
 
     }

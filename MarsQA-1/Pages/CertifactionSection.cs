@@ -41,18 +41,15 @@ namespace MarsQA_1.Pages
         string CertFromTextBoxpath = "//div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[2]/div[1]/input";
         string CertYearDropDownpath = "//div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[2]/div[2]/select";
         string CertYearDropDownOpt1path = "//div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[2]/div[2]/select/option[2]";
-
         string CertAddButtonpath = "//div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/div/div[3]/input[1]";
-        string CertTextpath = "//div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody/tr/td[1]";
+        string CertTextpath = "//div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[last()]/tr/td[1]";
 
-        string CertEditButtonpath = "//section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody/tr/td[4]/span[1]/i";
+        string CertEditButtonpath= "//section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[last()]//tr/td[4]/span[1]/i";
+        string CertEditFromTextpath = "//div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[last()]//tr/td/div/div/div[2]/input";
+        string CertUpdateButtonpath = "//div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[last()]//tr/td/div/span/input[1]";
+        string CertEditFromTextAfterPath = "//div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[last()]//tr/td[2]";
 
-        string CertEditFromTextpath = "//div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody/tr/td/div/div/div[2]/input";
-        string CertUpdateButtonpath = "//div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody/tr/td/div/span/input[1]";
-
-
-        string CertEditFromTextAfterPath = "//div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody/tr/td[2]";
-        string CertiDeleteButtonpath = "//div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody/tr/td[4]/span[2]/i";
+        string CertiDeleteButtonpath = "//div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[last()]//tr/td[4]/span[2]/i";
 
         public CertifactionSection()
         { 
@@ -66,6 +63,7 @@ namespace MarsQA_1.Pages
 
             CertTab = Driver.driver.FindElement(By.XPath(CertTabpath));
             CertTab.Click();
+            Thread.Sleep(2000);
 
         }
 
@@ -74,6 +72,7 @@ namespace MarsQA_1.Pages
 
             CertAddNewButton = Driver.driver.FindElement(By.XPath(CertAddNewButtonpath));
             CertAddNewButton.Click();
+            Thread.Sleep(2000);
 
             CertAwardTextBox = Driver.driver.FindElement(By.XPath(CertAwardTextBoxpath));
             CertAwardTextBox.SendKeys("ISTQB");
@@ -106,6 +105,7 @@ namespace MarsQA_1.Pages
 
             CertiDeleteButton = Driver.driver.FindElement(By.XPath(CertiDeleteButtonpath));
             CertiDeleteButton.Click();
+            Thread.Sleep(2000);
         }
 
         public void CretUpdate()
@@ -113,9 +113,12 @@ namespace MarsQA_1.Pages
             CertEditButton = Driver.driver.FindElement(By.XPath(CertEditButtonpath));
             CertEditButton.Click();
 
+            Thread.Sleep(3000);
+
             CertEditText = Driver.driver.FindElement(By.XPath(CertEditFromTextpath));
             CertEditText.Clear();
             CertEditText.SendKeys("MVPIndustryConnect");
+            Thread.Sleep(2000);
 
             CertUpdateButton = Driver.driver.FindElement(By.XPath(CertUpdateButtonpath));
             CertUpdateButton.Click();

@@ -61,7 +61,10 @@ namespace MarsQA_1.SpecDefinition
         [Then(@"The user deleted existing language sucessfully")]
         public void LanguageFunctionseven()
         {
-            Assert.True(true);
+            LanguageSection languageSection = new LanguageSection();
+            string msgValue = languageSection.getNewLangDetails();
+            Console.WriteLine("The Value" + msgValue);
+            Assert.That(msgValue != "English", "Test Case Failed");
         }
 
     }

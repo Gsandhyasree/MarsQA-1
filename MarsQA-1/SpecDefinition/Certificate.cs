@@ -59,7 +59,10 @@ namespace MarsQA_1.SpecDefinition
         [Then(@"The existing certification details deleted sucessfully")]
         public void certificationFunctionseven()
         {
-            Assert.True(true);
+            CertifactionSection certSection = new CertifactionSection();
+            string msgValue = certSection.getcertAward();
+            Assert.That(msgValue != "ISTQB", "Test Case Failed");
+
 
         }
 

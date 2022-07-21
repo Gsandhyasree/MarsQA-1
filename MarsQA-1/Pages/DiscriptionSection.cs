@@ -16,10 +16,10 @@ namespace MarsQA_1.Pages
         public static IWebElement descSaveButton;
 
 
-        string descEditButtonPath = "//div/section[2]/div/div/div/div[3]/div/div/div/h3/span/i";
-        string descTextDetailsPath = "//div/section[2]/div/div/div/div[3]/div/div/div/span";
-        string descTextAreaPath = "//div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/div[1]/textarea";
-        string descSaveButtonPath = "//div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/button";
+        string descEditButtonPath = "//h3[normalize-space()='Description']/span/i";
+        string descTextDetailsPath = "//div[@class='eight wide column']//div[@class='content']//div/span";
+        string descTextAreaPath = "//textarea[@placeholder='Please tell us about any hobbies, additional expertise, or anything else you’d like to add.']";
+        string descSaveButtonPath = "//button[@type='button']";
 
 
         public DiscriptionSection()
@@ -42,6 +42,7 @@ namespace MarsQA_1.Pages
             descTextArea.SendKeys("Hi Sandhya");
             descSaveButton = Driver.driver.FindElement(By.XPath(descSaveButtonPath));
             descSaveButton.Click();
+            Thread.Sleep(2000);
 
         }
 

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using NUnit.Framework;
+using System.Threading;
 
 namespace MarsQA.Helpers
 {
@@ -42,6 +43,7 @@ namespace MarsQA.Helpers
         public static void NavigateUrl()
         {
             driver.Navigate().GoToUrl(BaseUrl);
+            Thread.Sleep(1000);
         }
 
         //Close the browser
@@ -55,7 +57,7 @@ namespace MarsQA.Helpers
         [AfterScenario]
         public static void CloseTestRun()
         {
-            Close();
+           Close();
         } 
 
     }

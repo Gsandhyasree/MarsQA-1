@@ -1,7 +1,8 @@
 ﻿using System;
-
 using TechTalk.SpecFlow;
 using NUnit.Framework;
+using MarsQA_1.Pages;
+using System.Threading;
 
 namespace MarsQA_1.SpecDefinition
 {
@@ -9,32 +10,26 @@ namespace MarsQA_1.SpecDefinition
     public class Education
     {
 
+
+
         [When(@"User navigate to education tab")]
         public void educationFunctionOne()
         {
             // TODO: implement arrange (recondition) logic
 
-        }
-
-        [When(@"User add education details")]
-        public void educationFunctiontwo()
-        {
-            // TODO: implement arrange (recondition) logic
+            EducationSection educationSection = new EducationSection();
+            educationSection.GotoEduTab();
 
         }
-
-        [Then(@"The education details added sucessfully")]
-        public void educationFunctionthree()
-        {
-            // TODO: implement arrange (recondition) logic
-            Assert.Fail("Need to implement");
-
-        }
-
+      
         [When(@"User update existing education  details")]
         public void educationFunctionfour()
         {
             // TODO: implement arrange (recondition) logic
+
+            EducationSection educationSection = new EducationSection();
+            educationSection.EduEdit();
+            Thread.Sleep(2000);
 
         }
 
@@ -42,25 +37,13 @@ namespace MarsQA_1.SpecDefinition
         public void educationFunctionfive()
         {
             // TODO: implement arrange (recondition) logic
-            Assert.Fail("Need to implement");
+            EducationSection educationSection = new EducationSection();
+            string msgValue = educationSection.getUpadtedDegreeText();
+            string compareVal = "Accountancy " +  System.DateTime.Now.Hour + System.DateTime.Now.Minute;
+            Assert.That(msgValue == compareVal, "Test Case Failed");
 
         }
 
-        [When(@"User deleted existing education details")]
-        public void educationFunctionsix()
-        {
-            // TODO: implement arrange (recondition) logic
-
-        }
-
-        [Then(@"The existing education details deleted sucessfully")]
-        public void educationFunctionseven()
-        {
-            // TODO: implement arrange (recondition) logic
-            Assert.Fail("Neeed to implement");
-            
-
-        }
 
     }
 }
