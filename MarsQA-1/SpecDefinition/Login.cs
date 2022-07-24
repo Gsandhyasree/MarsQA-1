@@ -3,6 +3,7 @@ using MarsQA.Helpers;
 using MarsQA.Pages;
 using System;
 using TechTalk.SpecFlow;
+using System.Threading;
 
 
 namespace MarsQA.SpecDefinition
@@ -15,6 +16,7 @@ namespace MarsQA.SpecDefinition
         {
             Driver.Initialize();
             SignIn.SigninStep();
+            Thread.Sleep(5000);
          }
 
     }

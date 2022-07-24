@@ -46,7 +46,7 @@ namespace MarsQA_1.Pages
         {
             EducationTab = Driver.driver.FindElement(By.XPath(EducationTabpath));
             EducationTab.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
        
         }
 
@@ -54,10 +54,10 @@ namespace MarsQA_1.Pages
         {
             EduEditButton = Driver.driver.FindElement(By.XPath(EduEditButtonpath));
             EduEditButton.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
             EduText = Driver.driver.FindElement(By.XPath(EduTextpath));
             EduText.Clear();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
             EduText.SendKeys("Accountancy "+ System.DateTime.Now.Hour + System.DateTime.Now.Minute);
             Console.WriteLine("Minultes   " + System.DateTime.Now.Hour+ System.DateTime.Now.Minute);
             
@@ -65,7 +65,7 @@ namespace MarsQA_1.Pages
             EduUpdateButton = Driver.driver.FindElement(By.XPath(EduUpdateButtonpath));
             EduUpdateButton.Click();
 
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
         }
 

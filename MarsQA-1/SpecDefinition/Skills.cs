@@ -31,8 +31,11 @@ namespace MarsQA_1.SpecDefinition
         public void skillFunctionthree()
         {
             SkillSection skillSection = new SkillSection();
-            string msgValue = skillSection.getNewSkilletail();
-            Assert.That(msgValue == "Test Analyst", "Test Case Failed");
+            string skillValue = skillSection.getNewSkilletail();
+
+            string levelValue = skillSection.getSkillLevel();
+
+            Assert.That(skillValue == "Test Analyst" && levelValue == "Beginner", "Test Case Failed");
        
         }
 
@@ -48,8 +51,13 @@ namespace MarsQA_1.SpecDefinition
         public void skillFunctionfive()
         {
             SkillSection skillSection = new SkillSection();
-            string msgValue = skillSection.getSkillLevel();
-            Assert.That(msgValue == "Intermediate", "Test Case Failed");
+
+            string skillValue = skillSection.getNewSkilletail();
+
+            string levelValue = skillSection.getSkillLevel();
+           
+
+            Assert.That(skillValue == "Sr.Test Analyst" && levelValue == "Intermediate", "Test Case Failed");
         }
 
         [When(@"User delete existing skill")]
@@ -64,8 +72,14 @@ namespace MarsQA_1.SpecDefinition
         public void skillFunctionseven()
         {
             SkillSection skillSection = new SkillSection();
-            string msgValue = skillSection.getNewSkilletail();
-            Assert.That(msgValue != "Test Analyst", "Test Case Failed");
+
+            string skillValue = skillSection.getNewSkilletail();
+
+            string levelValue = skillSection.getSkillLevel();
+
+
+            Assert.That( (skillValue != "Sr.Test Analyst" && levelValue != "Intermediate" ) && (skillValue != "Test Analyst" && levelValue != "Beginner"), "Test Case Failed");
+            //Assert.That(msgValue != "Test Analyst", "Test Case Failed");
         }
 
     }

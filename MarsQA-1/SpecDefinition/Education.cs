@@ -29,7 +29,7 @@ namespace MarsQA_1.SpecDefinition
 
             EducationSection educationSection = new EducationSection();
             educationSection.EduEdit();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
         }
 

@@ -27,6 +27,7 @@ namespace MarsQA_1.Pages
 
 
         string SkilltabPath = "//a[normalize-space()='Skills']";
+        //string SkilltabPath = "//div/section[2]/div/div/div/div[3]/form/div[1]/a[2]";
 
         string SkillAddNewButtonpath = "//div[@class='ui teal button']";
         string SkillTextBoxpath = "//input[@placeholder='Add Skill']";
@@ -57,7 +58,7 @@ namespace MarsQA_1.Pages
             Skilltab = Driver.driver.FindElement(By.XPath(SkilltabPath));
             Skilltab.Click();
 
-            Thread.Sleep(2000);           
+            Thread.Sleep(3000);           
 
         }
 
@@ -72,24 +73,21 @@ namespace MarsQA_1.Pages
 
             Skillleveldropdown = Driver.driver.FindElement(By.XPath(SkillLeveldropdownpath));
             Skillleveldropdown.Click();
-            Thread.Sleep(1000);
+            Thread.Sleep(3000);
 
             SkillLeveldropdownopt1 = Driver.driver.FindElement(By.XPath(SkillLeveldropdownopt1Path));
             SkillLeveldropdownopt1.Click();
-            Thread.Sleep(1000);
+            Thread.Sleep(3000);
 
             SkillAddButton = Driver.driver.FindElement(By.XPath(SkillAddButtonpath));
             SkillAddButton.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
         }
 
-        public string getNewSkilletail()
-        {
-            SkillText = Driver.driver.FindElement(By.XPath(SkillTextpath));
-            return SkillText.Text;
+       
 
-        }
+        
 
 
         public void deleteSkill()
@@ -106,13 +104,18 @@ namespace MarsQA_1.Pages
             // Click Skill Edit Button
             SkillEdit = Driver.driver.FindElement(By.XPath(SkillEditpath));
             SkillEdit.Click();
-            Thread.Sleep(1000);
+            Thread.Sleep(3000);
+
+
+            SkillTextBox = Driver.driver.FindElement(By.XPath(SkillTextBoxpath));
+            SkillTextBox.Clear();
+            SkillTextBox.SendKeys("Sr.Test Analyst");
 
             //Click Level Drop Down
             Skillleveleditdropdown = Driver.driver.FindElement(By.XPath(Skillleveleditdropdownpath));
             Skillleveleditdropdown.Click();
 
-            Thread.Sleep(1000);
+            Thread.Sleep(3000);
             // Select Second option
             Skillleveleditdropdownopt2 = Driver.driver.FindElement(By.XPath(Skillleveleditdropdownopt2path));
             Skillleveleditdropdownopt2.Click();
@@ -121,11 +124,18 @@ namespace MarsQA_1.Pages
             Skilllevelupdate = Driver.driver.FindElement(By.XPath(Skilllevelupdatepath));
             Skilllevelupdate.Click();
 
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
         }
 
-       
+        public string getNewSkilletail()
+        {
+            SkillText = Driver.driver.FindElement(By.XPath(SkillTextpath));
+            return SkillText.Text;
+
+        }
+
+
         public string getSkillLevel()
         {
             SkillLevel = Driver.driver.FindElement(By.XPath(SkillLevelpath));

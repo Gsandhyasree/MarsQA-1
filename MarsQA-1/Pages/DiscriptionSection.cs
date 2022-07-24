@@ -31,7 +31,7 @@ namespace MarsQA_1.Pages
         {
             descEditButton = Driver.driver.FindElement(By.XPath(descEditButtonPath));
             descEditButton.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
         }
 
 
@@ -42,7 +42,7 @@ namespace MarsQA_1.Pages
             descTextArea.SendKeys("Hi Sandhya");
             descSaveButton = Driver.driver.FindElement(By.XPath(descSaveButtonPath));
             descSaveButton.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
         }
 

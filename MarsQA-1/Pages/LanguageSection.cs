@@ -58,7 +58,7 @@ namespace MarsQA_1.Pages
 
             LangTab = Driver.driver.FindElement(By.XPath(LangTabpath));
             LangTab.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
         }
 
@@ -67,14 +67,14 @@ namespace MarsQA_1.Pages
         {
             LangAddNewButton = Driver.driver.FindElement(By.XPath(LangAddNewButtonpath));
             LangAddNewButton.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
             LangTextBox = Driver.driver.FindElement(By.XPath(LangTextBoxpath));
             LangTextBox.SendKeys("English");
 
             LangLevelDropdown = Driver.driver.FindElement(By.XPath(LangLevelDropdownpath));
             LangLevelDropdown.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
             LangLevelDropdownOpt1 = Driver.driver.FindElement(By.XPath(LangLevelDropdownOpt1Path));
             LangLevelDropdownOpt1.Click();
@@ -89,7 +89,7 @@ namespace MarsQA_1.Pages
             LangText = Driver.driver.FindElement(By.XPath(LangTextpath));
             return LangText.Text;
 
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
         }
 
 
@@ -97,7 +97,7 @@ namespace MarsQA_1.Pages
         {
             LangDelete = Driver.driver.FindElement(By.XPath(LangDeletepath));
             LangDelete.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
         }
 
 
@@ -105,18 +105,18 @@ namespace MarsQA_1.Pages
         {
             Langedit = Driver.driver.FindElement(By.XPath(Langeditpath));
             Langedit.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
             LangLevelEditDropdown = Driver.driver.FindElement(By.XPath(LangLevelEditDropdownPath));
             LangLevelEditDropdown.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
             LangLevelEditDropdownOpt2 = Driver.driver.FindElement(By.XPath(LangLevelEditDropdownOpt2Path));
             LangLevelEditDropdownOpt2.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
             LanglevelUpdate = Driver.driver.FindElement(By.XPath(LanglevelUpdatepath));
             LanglevelUpdate.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
         }
 

@@ -63,7 +63,7 @@ namespace MarsQA_1.Pages
 
             CertTab = Driver.driver.FindElement(By.XPath(CertTabpath));
             CertTab.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
         }
 
@@ -72,7 +72,7 @@ namespace MarsQA_1.Pages
 
             CertAddNewButton = Driver.driver.FindElement(By.XPath(CertAddNewButtonpath));
             CertAddNewButton.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
             CertAwardTextBox = Driver.driver.FindElement(By.XPath(CertAwardTextBoxpath));
             CertAwardTextBox.SendKeys("ISTQB");
@@ -82,7 +82,7 @@ namespace MarsQA_1.Pages
 
             CertYearDropDown = Driver.driver.FindElement(By.XPath(CertYearDropDownpath));
             CertYearDropDown.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
             CertYearDropDownOpt1 = Driver.driver.FindElement(By.XPath(CertYearDropDownOpt1path));
             CertYearDropDownOpt1.Click();
@@ -105,7 +105,7 @@ namespace MarsQA_1.Pages
 
             CertiDeleteButton = Driver.driver.FindElement(By.XPath(CertiDeleteButtonpath));
             CertiDeleteButton.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
         }
 
         public void CretUpdate()
@@ -118,12 +118,12 @@ namespace MarsQA_1.Pages
             CertEditText = Driver.driver.FindElement(By.XPath(CertEditFromTextpath));
             CertEditText.Clear();
             CertEditText.SendKeys("MVPIndustryConnect");
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
             CertUpdateButton = Driver.driver.FindElement(By.XPath(CertUpdateButtonpath));
             CertUpdateButton.Click();
 
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
         }
 

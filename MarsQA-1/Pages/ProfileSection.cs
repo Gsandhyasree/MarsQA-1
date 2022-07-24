@@ -36,7 +36,7 @@ namespace MarsQA_1.Pages
         {
             ProfileTab = Driver.driver.FindElement(By.XPath(ProfileTabPath));
             ProfileTab.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
         }
 

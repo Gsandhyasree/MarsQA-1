@@ -27,7 +27,7 @@ namespace MarsQA_1.Pages
             profiletab = Driver.driver.FindElement(By.XPath(profiletabPath));
             Console.WriteLine(profiletab.Text);
             profiletab.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
         }
 
     }

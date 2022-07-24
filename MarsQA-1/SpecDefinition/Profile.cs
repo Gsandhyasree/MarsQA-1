@@ -18,7 +18,7 @@ namespace MarsQA_1.SpecDefinition
         [When(@"User navigate to  profile page")]
         public void ProfileFunctionOne()
         {
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
             // TODO: implement arrange (recondition) logic
             ProfileSection profileSection = new ProfileSection();
 
