@@ -86,10 +86,10 @@ namespace MarsQA_1.Pages
 
         public string getNewLangDetails()
         {
+            Thread.Sleep(3000);
             LangText = Driver.driver.FindElement(By.XPath(LangTextpath));
             return LangText.Text;
-
-            Thread.Sleep(3000);
+           
         }
 
 

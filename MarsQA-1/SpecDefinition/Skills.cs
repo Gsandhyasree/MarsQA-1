@@ -1,7 +1,7 @@
 ﻿using System;
 using TechTalk.SpecFlow;
 using NUnit.Framework;
-using System.Threading; 
+
 using MarsQA_1.Pages;
 
 namespace MarsQA_1.SpecDefinition
@@ -85,3 +85,4 @@ namespace MarsQA_1.SpecDefinition
     }
 
 }
+
